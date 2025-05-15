@@ -14,7 +14,7 @@ spec:
         app: guestbook-api
     spec:
       containers:
-      - image: manav23/backend
+      - image: manav23/frontendtask
         name: guestbook-api
         ports:
-        - containerPort: 5000
+        - containerPort: 80
