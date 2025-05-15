@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-api
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-api
+  template:
+    metadata:
+      labels:
+        app: guestbook-api
+    spec:
+      containers:
+      - image: manav23/backend
+        name: guestbook-api
+        ports:
+        - containerPort: 5000
